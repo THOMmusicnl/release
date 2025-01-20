@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THOM - Release Reveal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #2e2e2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column; /* Stack content vertically */
+            padding-top: 100px; /* Add more headroom at the top */
+        }
+        .container {
+            text-align: center;
+            margin-top: 40px; /* Adjust top margin if you need additional spacing */
+        }
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            color: #fff;
+            background-color: #a9a9a9;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            margin: 10px 0; /* Add margin between buttons */
+        }
+        .button:hover {
+            background-color: #c0c0c0;
+            transform: scale(1.05);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .image {
+            margin-bottom: 20px;
+            width: 400px;
+            height: 400px;
+        }
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
+        .popup .exit-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup .exit-btn:hover {
+            background-color: #d32f2f;
+        }
+        .button-row {
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+            gap: 2px; /* Reduced gap between buttons */
+            margin-top: 20px; /* Reduced space between the "EARLY RELEASES" text and buttons */
+        }
+        .early-releases {
+            font-size: 2em;
+            margin-bottom: 0px; /* Reduce space between the "EARLY RELEASES" text and buttons */
+            margin-top: 80px; /* Adjust this value to move the text lower */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./local-image.jpg" alt="THOM Release" class="image">
+        <h1>THOM'S CD 2.0 - CV '25 EDITION (feat. YOR)</h1>
+        <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒OUT ON 10-02-2025🔒</a>
+    </div>
+
+    
+    <!-- "EARLY RELEASES" Text -->
+    <div class="early-releases">
+        EARLY RELEASES
+    </div>
+
+    <div class="button-row">
+        <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒AVAILABLE ON 06-02🔒</a>
+        <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒AVAILABLE ON 07-02🔒</a>
+        <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒AVAILABLE ON 08-02🔒</a>
+        <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒AVAILABLE ON 09-02🔒</a>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <p>This is not available yet.</p>
+        <button class="exit-btn" onclick="closePopup()">Exit</button>
+    </div>
+
+    <script>
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+
+    <!--<a href="https://www.link1.com" class="button" target="_blank">🔒AVAILABLE ON 06-02🔒</a>
+    <!--<a href="javascript:void(0)" class="button" onclick="showPopup()">🔒OUT ON 10-02-2025🔒</a>
