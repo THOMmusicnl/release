@@ -11,21 +11,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: #2e2e2e;
             color: white;
             font-family: Arial, sans-serif;
             flex-direction: column; /* Stack content vertically */
-            padding-top: 100px; /* Add more headroom at the top */
+            padding-top: 5vh; /* Add more headroom at the top */
         }
         .container {
             text-align: center;
-            margin-top: 80px; /* Adjust top margin if you need additional spacing */
+            margin-top: 2vh; /* Adjust top margin for spacing */
         }
         .button {
             display: inline-block;
-            padding: 20px 40px;
-            font-size: 1.5em;
+            padding: 2vh 4vw; /* Scale button padding */
+            font-size: 1.5vw; /* Responsive font size */
             color: #fff;
             background-color: #a9a9a9;
             border: none;
@@ -33,21 +33,21 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
             cursor: pointer;
-            margin: 10px 0; /* Add margin between buttons */
+            margin: 2vh 0; /* Add margin between buttons */
         }
         .button:hover {
             background-color: #c0c0c0;
             transform: scale(1.05);
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 3vw; /* Responsive heading size */
+            margin-bottom: 2vh;
         }
         .image {
-            margin-bottom: 20px;
-            margin-top: 40px;
-            width: 400px;
-            height: 400px;
+            margin-bottom: 2vh;
+            margin-top: 0vh;
+            width: 20vw; /* Scale with viewport width */
+            height: auto; /* Maintain aspect ratio */
         }
         /* Popup Styles */
         .popup {
@@ -57,15 +57,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #333;
-            padding: 20px;
+            padding: 2vh;
             border-radius: 10px;
             color: white;
             text-align: center;
             z-index: 10;
+            width: 80vw; /* Scale popup width */
+            max-width: 400px; /* Set a reasonable max width */
         }
         .popup .exit-btn {
-            margin-top: 10px;
-            padding: 10px 20px;
+            margin-top: 2vh;
+            padding: 1vh 2vw;
             background-color: #f44336;
             color: white;
             border: none;
@@ -80,13 +82,13 @@
             justify-content: center;
             flex-direction: column; /* Stack buttons vertically */
             align-items: center;
-            gap: 2px; /* Reduced gap between buttons */
-            margin-top: 20px; /* Reduced space between the "EARLY RELEASES" text and buttons */
+            gap: 1vh; /* Reduced gap between buttons */
+            margin-top: 4vh; /* Adjust space above buttons */
         }
         .early-releases {
-            font-size: 2em;
-            margin-bottom: 0px; /* Reduce space between the "EARLY RELEASES" text and buttons */
-            margin-top: 80px; /* Adjust this value to move the text lower */
+            font-size: 2vw; /* Responsive font size */
+            margin-bottom: 1vh; /* Reduce space between the "EARLY RELEASES" text and buttons */
+            margin-top: 5vh; /* Adjust vertical spacing */
         }
     </style>
 </head>
@@ -97,7 +99,6 @@
         <a href="javascript:void(0)" class="button" onclick="showPopup()">🔒OUT ON 10-02-2025🔒</a>
     </div>
 
-    
     <!-- "EARLY RELEASES" Text -->
     <div class="early-releases">
         EARLY RELEASES
